@@ -23,7 +23,7 @@
     "swr": "^0.3.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.0",
+    "@babel/core": "^7.12.3",
     "@storybook/react": "^6.0.26",
     "@strv/eslint-config-react": "^3.1.2",
     "@strv/prettier-config": "^1.0.3",
