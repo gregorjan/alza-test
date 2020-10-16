@@ -1,6 +1,5 @@
-import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Section } from '../components/Section'
+import { Section } from '@components'
 
 storiesOf('Section', module).add('with paragraph', () => (
   <Section>

@@ -1,5 +1,4 @@
-import { FC, ButtonHTMLAttributes } from 'react'
+import { FC } from 'react'
+import * as S from './styled'
 
-export const Button: FC<ButtonHTMLAttributes<HTMLButtonElement>> = (props) => (
-  <button {...props} />
-)
+export const Button: FC<S.Props> = (props) => <S.Button {...props} />
