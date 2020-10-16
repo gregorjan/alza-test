@@ -15,5 +15,5 @@ jobs:
         run: yarn
       - name: Lint
         run: |
-          yarn lint:ts,
+          yarn lint:ts
           yarn lint:css
