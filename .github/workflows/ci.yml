@@ -17,4 +17,7 @@ jobs:
         run: |
           yarn lint:ts
           yarn lint:css
+      - name: Test
+        run: |
           yarn test
+
