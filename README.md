@@ -20,8 +20,12 @@ Storybook will run on [http://localhost:6006](http://localhost:6006)
 
 ## Repository
 
-You can check out [github](https://github.com/gregorjan/alza-test)
+You can check out [github](https://github.com/gregorjan/alza-test).
+
+App has automated dependency updates with dependabot and automated tests using github actions.
 
 ## Deploy on Vercel
 
 App is automaticaly deployed to vercel [alza-test.vercel.app](https://alza-test.vercel.app/)
+
+##
