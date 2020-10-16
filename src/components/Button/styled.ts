@@ -1,6 +1,11 @@
 import { ButtonHTMLAttributes } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export type Props = ButtonHTMLAttributes<HTMLButtonElement> & {}
+export type Props = ButtonHTMLAttributes<HTMLButtonElement>
 
-export const Button = styled.button<Props>``
+export const Button = styled.button<Props>`
+  ${({ theme: { colors } }) =>
+    css`
+      background-color: ${colors.primary};
+    `}
+`

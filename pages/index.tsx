@@ -1,6 +1,8 @@
-import Head from "next/head";
+import Head from 'next/head'
+import { FC } from 'react'
+import { BestSellers, Categories, List } from '@sections'
 
-export default function Home() {
+const Home: FC = () => {
   return (
     <div>
       <Head>
@@ -9,8 +11,12 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>test</h1>
+        <BestSellers />
+        <Categories />
+        <List />
       </main>
     </div>
-  );
+  )
 }
+
+export default Home

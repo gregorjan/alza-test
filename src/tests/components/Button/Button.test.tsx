@@ -1,11 +1,9 @@
-import React from 'react'
 import { render, screen } from '@tests'
-import { Button } from '@components'
+import { Base } from './Button.stories'
 
 describe('button', () => {
   it('should render text', () => {
-    render(<Button>text</Button>)
-
+    render(<Base />)
     const text = screen.getByText('text')
     expect(text).toBeInTheDocument()
   })
