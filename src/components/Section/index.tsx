@@ -1,5 +1,5 @@
-import { HTMLAttributes } from "react";
+import { FC, HTMLAttributes } from 'react'
 
-export const Section = (props: HTMLAttributes<HTMLElement>) => (
+export const Section: FC<HTMLAttributes<HTMLElement>> = (props) => (
   <section {...props} />
-);
+)

@@ -1,7 +1,5 @@
-import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { Button } from "../components/Button";
+import * as React from 'react'
+import { storiesOf } from '@storybook/react'
+import { Button } from '../components/Button'
 
-storiesOf("Button", module).add("with text", () => {
-  return <Button>test</Button>;
-});
+storiesOf('Button', module).add('with text', () => <Button>test</Button>)

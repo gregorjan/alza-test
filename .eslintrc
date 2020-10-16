@@ -1,0 +1,25 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "@strv/react",
+    "@strv/react/optional",
+    "@strv/react/style",
+    "plugin:prettier/recommended"
+  ],
+
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "globals": {
+    "module": "readonly"
+  }
+}
