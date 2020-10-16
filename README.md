@@ -10,6 +10,14 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+Alternatively view components in storybook:
+
+```bash
+yarn storybook
+```
+
+Storybook will run on [http://localhost:6006](http://localhost:6006)
+
 ## Repository
 
 You can check out [github](https://github.com/gregorjan/alza-test)
