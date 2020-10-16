@@ -1,5 +1,6 @@
 {
   "root": true,
+  "parser": "@typescript-eslint/parser",
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "@strv/react",
@@ -14,10 +15,14 @@
   },
   "settings": {
     "import/resolver": {
+      "typescript": {},
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
+  },
+  "env": {
+    "jest": true
   },
   "globals": {
     "module": "readonly"
