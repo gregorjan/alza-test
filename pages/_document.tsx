@@ -1,30 +1,25 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import Document, {
   Html,
   Head,
   Main,
   NextScript,
   DocumentContext,
-} from "next/document";
-
-import { ServerStyleSheet } from "styled-components";
+} from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 
 interface Props {
-  styleTags: ReturnType<ServerStyleSheet["getStyleElement"]>;
+  styleTags: ReturnType<ServerStyleSheet['getStyleElement']>
 }
 
 export default class MyDocument extends Document<Props> {
-  // static async getInitialProps({ renderPage }: DocumentContext) {
-  //   const sheet = new ServerStyleSheet();
-  //   const page = renderPage((App) => (props) => {
-  //     return sheet.collectStyles(<App {...props} />);
-  //   });
-  //   const styleTags = sheet.getStyleElement();
-  //   return { ...page, styleTags }
-  // }
-
-  static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+  static async getInitialProps({ renderPage }: DocumentContext) {
+    const sheet = new ServerStyleSheet()
+    const page = await renderPage((App) => (props) => {
+      return sheet.collectStyles(<App {...props} />)
+    })
+    const styleTags = sheet.getStyleElement()
+    return { ...page, styleTags }
   }
 
   render() {
@@ -36,6 +31,6 @@ export default class MyDocument extends Document<Props> {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
