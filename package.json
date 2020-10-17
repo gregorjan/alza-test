@@ -15,9 +15,11 @@
   "dependencies": {
     "@types/styled-components": "^5.1.4",
     "@types/styled-system": "^5.1.10",
+    "isomorphic-unfetch": "^3.1.0",
     "next": "9.5.5",
     "react": "16.14.0",
     "react-dom": "16.14.0",
+    "react-query": "^2.23.1",
     "styled-components": "^5.2.0",
     "styled-system": "^5.1.5",
     "swr": "^0.3.5"
@@ -38,7 +40,7 @@
     "babel-loader": "^8.1.0",
     "babel-preset-react-app": "^9.1.2",
     "eslint": "^7.11.0",
-    "eslint-config-prettier": "^6.12.0",
+    "eslint-config-prettier": "^6.13.0",
     "eslint-import-resolver-typescript": "^2.3.0",
     "eslint-import-resolver-webpack": "^0.13.0",
     "eslint-plugin-import": "^2.22.1",

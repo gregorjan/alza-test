@@ -10,7 +10,9 @@
   ],
 
   "rules": {
+    "no-shadow": "off",
     "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
     "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
   },
   "settings": {
