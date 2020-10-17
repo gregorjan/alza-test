@@ -1,13 +1,12 @@
 import { FC } from 'react'
 import { Section } from '@components'
 import { useData } from '@hooks'
-import { Button } from 'src/components/Button/styled'
 
 export const List: FC = () => {
   const data = useData()
   return (
     <Section>
-      <Button>asdf</Button>
+      List
       {data &&
         data.data.map((product) => (
           <div key={product.id}>
