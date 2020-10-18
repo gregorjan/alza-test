@@ -4,7 +4,7 @@ import { Base } from './Categories.stories'
 describe('categories', () => {
   it('should render text', () => {
     render(<Base />)
-    const text = screen.getByText('Categories')
-    expect(text).toBeInTheDocument()
+    const link = screen.getByText('text')
+    expect(link).toBeInTheDocument()
   })
 })

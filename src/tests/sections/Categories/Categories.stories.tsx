@@ -4,4 +4,5 @@ import { Categories } from '@sections'
 
 export default { title: 'Categories' }
 
-export const Base = () => renderStories(<Categories />)
+export const Base = () =>
+  renderStories(<Categories links={[{ href: '#', text: 'text' }]} />)
