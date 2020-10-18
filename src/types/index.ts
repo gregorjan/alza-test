@@ -13,7 +13,7 @@ interface Item {
   name: string
   spec: string
   price: string
-  cprice: null // ??
+  cprice: string | null
   priceWithoutVat: string
   avail: string
   avail_postfix: string
@@ -24,22 +24,32 @@ interface Item {
   action_name: string
   rating: number
   promo_cnt: number
-  promos: null
+  promos:
+    | {
+        id: number
+        name: string
+        img: string
+        count: number
+        price: string
+        is_enabled: boolean
+        order: number
+      }[]
+    | null
   order: number
   is_special_service: boolean
   type: number // enum
   can_buy: boolean
   itemType: string // enum
   orderItemId: null
-  maxCanBuy: number
+  maxCanBuy: number | null
   url: string
-  supplierCode: string
+  supplierCode?: string
   minimumAmount: number
   amountInPack: number
   start_time: null // ??
   end_time: null // ??
   variant_type: number // enum
-  advertising: string
+  advertising?: string
   priceNoCurrency: number
   categoryName: null
   inBasket: number
