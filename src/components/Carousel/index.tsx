@@ -62,8 +62,12 @@ export const Carousel: FC<{ children: ReactNodeArray }> = ({ children }) => {
   return (
     <S.Wrapper height={`${sliderDimensions[1]}px`}>
       <S.ChevronWrapper>
-        <S.Chevron onClick={() => setAnimation('left')}>&#9664;</S.Chevron>
-        <S.Chevron onClick={() => setAnimation('right')}>&#9654;</S.Chevron>
+        <S.Chevron aria-hidden="true" onClick={() => setAnimation('left')}>
+          &#9664;
+        </S.Chevron>
+        <S.Chevron aria-hidden="true" onClick={() => setAnimation('right')}>
+          &#9654;
+        </S.Chevron>
       </S.ChevronWrapper>
       <S.SliderWrapper height={`${sliderDimensions[1]}px`}>
         <S.Slider
