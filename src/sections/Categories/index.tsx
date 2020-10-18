@@ -1,4 +1,22 @@
 import { FC } from 'react'
-import { Section } from '@components'
+import { Wrapper } from './styled'
+import { CategoryLink } from '@components'
 
-export const Categories: FC = () => <Section>Categories</Section>
+type Link = {
+  href: string
+  text: string
+}
+
+type Props = {
+  links: Link[]
+}
+
+export const Categories: FC<Props> = ({ links }) => (
+  <Wrapper>
+    {links.map(({ text, href }) => (
+      <CategoryLink key={text} href={href}>
+        {text}
+      </CategoryLink>
+    ))}
+  </Wrapper>
+)

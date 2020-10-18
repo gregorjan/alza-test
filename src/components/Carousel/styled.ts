@@ -40,8 +40,9 @@ const ChevronWrapper = styled.div`
 `
 
 const Chevron = styled(Button)`
-  ${({ theme: { space, colors } }) => {
-    return css`
+  padding: 0;
+  ${({ theme: { space, colors } }) =>
+    css`
       height: ${space[7]};
       width: ${space[3]};
       background-color: ${colors.primary};
@@ -54,8 +55,7 @@ const Chevron = styled(Button)`
         border-top-left-radius: calc(${space[1]} / 2);
         border-bottom-left-radius: calc(${space[1]} / 2);
       }
-    `
-  }}
+    `}
 `
 
 type SlidesWrapperProps = {

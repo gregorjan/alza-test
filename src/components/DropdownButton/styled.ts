@@ -7,7 +7,7 @@ const Wrapper = styled.div`
 
 const Button = styled(BaseButton)`
   ${({ theme: { space } }) => css`
-    padding: ${space[1]} ${space[2]};
+    padding: ${space[1]} ${space[1]} ${space[1]} ${space[2]};
   `}
 `
 
