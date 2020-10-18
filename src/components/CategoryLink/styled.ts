@@ -10,12 +10,16 @@ const Link = styled.a`
   font-weight: bold;
   margin: 1px;
   ${({ theme: { colors, space } }) => css`
-    flex-basis: ${space[15]};
-    padding: ${space[1]} ${space[1]} ${space[1]} ${space[2]};
+    width: ${space[20]};
+    padding: ${space[2]} ${space[2]} ${space[2]} ${space[3]};
     color: ${colors.text};
     background-color: ${colors.tertiary};
     border: 1px solid ${colors.border};
   `}
+`
+
+const LinkText = styled.span`
+  ${({ theme }) => theme.threeDots};
 `
 
 const LinkChevron = styled.span`
@@ -25,4 +29,4 @@ const LinkChevron = styled.span`
   `}
 `
 
-export { Link, LinkChevron }
+export { Link, LinkText, LinkChevron }

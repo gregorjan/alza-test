@@ -5,7 +5,7 @@ type Props = { href: string }
 
 export const CategoryLink: FC<Props> = ({ children, href }) => (
   <S.Link href={href}>
-    <span>{children}</span>
+    <S.LinkText>{children}</S.LinkText>
     <S.LinkChevron>&#9654;</S.LinkChevron>
   </S.Link>
 )

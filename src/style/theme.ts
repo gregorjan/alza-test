@@ -1,3 +1,5 @@
+import { css } from 'styled-components'
+
 export const theme = {
   colors: {
     primary: '#0094e7',
@@ -7,4 +9,9 @@ export const theme = {
     text: '#000',
   },
   space: Array.from(Array(21)).map((_e, i) => `${i * 8}px`),
+  threeDots: css`
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  `,
 }

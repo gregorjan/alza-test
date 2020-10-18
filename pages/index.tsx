@@ -2,6 +2,9 @@ import Head from 'next/head'
 import { FC, createContext } from 'react'
 import { GetServerSideProps } from 'next'
 import { useQuery } from 'react-query'
+// TODO figure where to get categories
+// eslint-disable-next-line import/extensions
+import links from '../mocks/links.json'
 import { getProducts, getProductsApi } from '@api'
 import { Data } from '@types'
 import { BestSellers, Categories, List } from '@sections'
@@ -25,7 +28,8 @@ const Home: FC<Props> = ({ initialData }) => {
       </Head>
 
       <main>
-        <Categories />
+        {/* TODO figure where to get categories */}
+        <Categories links={(links as any).data} />
         <BestSellers />
         <List />
       </main>
