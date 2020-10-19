@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { FC, createContext } from 'react'
 import { GetServerSideProps } from 'next'
-import { useQuery } from 'react-query'
+// import { useQuery } from 'react-query'
 // TODO figure where to get categories
 // eslint-disable-next-line import/extensions
 import links from '../mocks/links.json'

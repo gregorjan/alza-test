@@ -10,16 +10,10 @@ const Wrapper = styled.div`
 
 const Tab = styled(Button)<{ active: boolean }>`
   width: 100%;
-<<<<<<< Updated upstream
-  ${({ active, theme: { colors, space } }) => css`
-    color: ${active ? colors.primaryAlt : colors.primary};
-    background-color: ${active ? colors.primary : colors.primaryAlt};
-=======
   height: 100%;
   ${({ theme: { colors, space } }) => css`
     color: ${colors.primaryAlt};
     background-color: ${colors.primary};
->>>>>>> Stashed changes
     padding: ${space[1]} ${space[2]};
     border-top-left-radius: ${space[1]};
     border-top-right-radius: ${space[1]};
