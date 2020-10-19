@@ -1,10 +1,10 @@
 import { render, screen } from '@tests'
-import { Base } from './List.stories'
+import { Base } from './Rating.stories'
 
-describe('list', () => {
+describe('rating', () => {
   it('should render text', () => {
     render(<Base />)
-    // const text = screen.getByText('List')
+    // const text = screen.getByText('text')
     // expect(text).toBeInTheDocument()
   })
 })

@@ -12,8 +12,18 @@ const generateSlides = (slides: ReactNodeArray, current: number) => {
   const newSlides = [...slides]
   const spliced = newSlides.splice(0, current)
   const result = [...newSlides, ...spliced] as ReactNodeArray
-  result.push(result[0])
-  result.unshift(result[result.length - 2])
+  result.push({
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    ...result[0],
+    key: `${result[0].key}-first`,
+  })
+  result.unshift({
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    ...result[result.length - 2],
+    key: `${result[result.length - 2].key}-last`,
+  })
   return result
 }
 

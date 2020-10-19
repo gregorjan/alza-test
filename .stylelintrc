@@ -4,6 +4,6 @@
     "stylelint-config-prettier"
   ],
   "rules": {
-    "declaration-empty-line-before": "never"
+    "declaration-empty-line-before": "never",
   }
 }

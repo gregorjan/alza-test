@@ -1,5 +1,3 @@
-import { FC, HTMLAttributes } from 'react'
+import styled from 'styled-components'
 
-export const Section: FC<HTMLAttributes<HTMLElement>> = (props) => (
-  <section {...props} />
-)
+export const Section = styled.section``

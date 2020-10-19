@@ -8,13 +8,15 @@ const Link = styled.a`
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: bold;
-  margin: 1px;
   ${({ theme: { colors, space } }) => css`
+    margin: calc(${space[1]} / 2);
     width: ${space[20]};
     padding: ${space[2]} ${space[2]} ${space[2]} ${space[3]};
-    color: ${colors.text};
-    background-color: ${colors.tertiary};
-    border: 1px solid ${colors.border};
+    color: ${colors.heading};
+    border: 1px solid ${colors.primary};
+    &:hover {
+      background-color: ${colors.tertiary};
+    }
   `}
 `
 
