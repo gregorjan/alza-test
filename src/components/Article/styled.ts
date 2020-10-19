@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-const Wrapper = styled.article`
+const CarouselWrapper = styled.article`
   width: 240px;
   height: 400px;
   display: flex;
@@ -9,13 +9,19 @@ const Wrapper = styled.article`
   justify-content: flex-start;
   ${({ theme: { colors, space } }) => css`
     margin: 0 ${space[1]};
-
     border-radius: ${space[1]};
     box-shadow: 0 0 ${space[2]} ${colors.border};
   `}
 `
 
-const ImageWrapper = styled.div`
+const TabWrapper = styled(CarouselWrapper)`
+  height: 450px;
+  ${({ theme: { space } }) => css`
+    margin: ${space[1]};
+  `}
+`
+
+const ImageWrapper = styled.a`
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -31,18 +37,17 @@ const ImageWrapper = styled.div`
 `
 
 const Image = styled.img`
-  min-height: 1px;
-  min-width: 1px;
-  max-width: 100%;
-  max-height: 100%;
+  height: 154px;
+  object-fit: contain;
 `
 
 const Description = styled.div`
   display: flex;
   flex-direction: column;
+  align-self: stretch;
   flex-grow: 1;
   ${({ theme: { space } }) => css`
-    padding: ${space[1]};
+    padding: ${space[1]} ${space[1]} ${space[2]};
   `}
 `
 
@@ -64,11 +69,13 @@ const Spec = styled.p`
   ${({ theme: { multilineDots } }) => multilineDots(4, 1.4)}
 `
 
-const Price = styled.span`
+const Price = styled.div`
   font-size: 1.8rem;
   text-align: left;
   align-self: stretch;
   font-weight: bold;
+  display: flex;
+  align-items: center;
   ${({ theme: { colors } }) => css`
     color: ${colors.price};
   `}
@@ -77,6 +84,39 @@ const Price = styled.span`
 const Link = styled.a`
   text-decoration: none;
   cursor: pointer;
+  ${({ theme: { colors } }) => css`
+    color: ${colors.heading};
+  `}
+
+  &:hover {
+    text-decoration: underline;
+  }
 `
 
-export { Wrapper, ImageWrapper, Image, Name, Spec, Description, Price, Link }
+const Row = styled.div`
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  align-self: stretch;
+`
+
+const InStock = styled.div`
+  ${({ theme: { colors } }) => css`
+    color: ${colors.heading};
+    font-weight: bold;
+  `}
+`
+
+export {
+  TabWrapper,
+  CarouselWrapper,
+  ImageWrapper,
+  Image,
+  Name,
+  Spec,
+  Description,
+  Price,
+  Link,
+  Row,
+  InStock,
+}

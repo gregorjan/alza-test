@@ -30,14 +30,8 @@ const Home: FC<Props> = ({ initialData }) => {
       <main>
         {/* TODO figure where to get categories */}
         <Categories links={(links as any).data} />
-        {data ? (
-          <>
-            <BestSellers data={data && data.data} />
-            <List />
-          </>
-        ) : (
-          'Loading...'
-        )}
+        <BestSellers />
+        <List />
       </main>
     </Context.Provider>
   )

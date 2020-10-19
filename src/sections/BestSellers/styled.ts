@@ -1,12 +1,8 @@
 import styled, { css } from 'styled-components'
 import { Section } from '@components'
 
-const Wrapper = styled(Section)`
-  display: flex;
-  flex-wrap: wrap;
+export const Wrapper = styled(Section)`
   ${({ theme: { space } }) => css`
-    margin: ${space[2]};
+    margin: ${space[3]} 0;
   `}
 `
-
-export { Wrapper }

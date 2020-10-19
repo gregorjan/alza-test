@@ -1,5 +1,7 @@
 import { FC } from 'react'
+import { DropdownButton } from '../DropdownButton'
 import { Rating } from '../Rating'
+import { Link } from '../Link'
 import * as S from './styled'
 import { Item } from '@types'
 
@@ -8,22 +10,42 @@ export type TabArticleProps = {
 }
 
 export const TabArticle: FC<TabArticleProps> = ({
-  data: { img, name, spec, price, rating, url },
+  data: { img, name, spec, price, rating, url, avail },
 }) => (
-  <S.Wrapper>
-    <S.ImageWrapper>
-      <S.Link href={url}>
-        <S.Image src={img} alt="" />
-      </S.Link>
-    </S.ImageWrapper>
-
+  <S.TabWrapper>
     <S.Description>
-      <S.Link href={url}>
-        <S.Name>{name}</S.Name>
-      </S.Link>
-      <Rating rating={rating} />
+      <S.Name>
+        <S.Link href={url}>{name} </S.Link>
+      </S.Name>
       <S.Spec>{spec}</S.Spec>
-      <S.Price>{price}</S.Price>
     </S.Description>
-  </S.Wrapper>
+    <S.ImageWrapper href={url}>
+      <S.Image src={img} alt="" />
+    </S.ImageWrapper>
+    <S.Description>
+      <Rating rating={rating} />
+      <S.Row>
+        <S.Price>{price}</S.Price>
+        <DropdownButton
+          actions={[
+            <Link key="0" href="#">
+              Koupit zrychleně
+            </Link>,
+            <Link key="2" href="#">
+              Porovnat
+            </Link>,
+            <Link key="2" href="#">
+              Hlídat
+            </Link>,
+            <Link key="3" href="#">
+              Přidat do seznamu
+            </Link>,
+          ]}
+        >
+          Koupit
+        </DropdownButton>
+      </S.Row>
+      <S.InStock>{avail}</S.InStock>
+    </S.Description>
+  </S.TabWrapper>
 )

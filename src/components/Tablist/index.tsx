@@ -23,6 +23,7 @@ export const Tablist: FC<Props> = ({ tabs }) => {
               id={`tab-${tab}`}
               role="tab"
               onClick={() => handleOnClick(tab)}
+              active={activeTab === tab}
             >
               {tab}
             </S.Tab>
