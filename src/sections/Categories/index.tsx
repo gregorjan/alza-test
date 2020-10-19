@@ -12,11 +12,14 @@ type Props = {
 }
 
 export const Categories: FC<Props> = ({ links }) => (
-  <S.Wrapper>
-    {links.map(({ text, href }) => (
-      <CategoryLink key={text} href={href}>
-        {text}
-      </CategoryLink>
-    ))}
-  </S.Wrapper>
+  <div>
+    <S.H1>Notebooky</S.H1>
+    <S.Wrapper>
+      {links.map(({ text, href }) => (
+        <CategoryLink key={text} href={href}>
+          {text}
+        </CategoryLink>
+      ))}
+    </S.Wrapper>
+  </div>
 )

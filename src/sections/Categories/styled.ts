@@ -9,4 +9,11 @@ const Wrapper = styled(Section)`
   `}
 `
 
-export { Wrapper }
+const H1 = styled.h1`
+  font-size: 2rem;
+  ${({ theme: { colors } }) => css`
+    color: ${colors.heading};
+  `}
+`
+
+export { Wrapper, H1 }

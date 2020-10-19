@@ -3,9 +3,11 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
     html {
         font-size: 62.5%;
+       
     }
     body {
-        margin: 0;
+        max-width: 1100px;
+        margin: 0 auto;
     }
     * {  
         font-family: Arial, Helvetica, sans-serif;

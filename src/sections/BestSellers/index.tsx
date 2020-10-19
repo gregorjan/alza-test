@@ -7,6 +7,7 @@ export const BestSellers: FC = () => {
   const data = useData()
   return (
     <S.Wrapper>
+      <S.H2>Nejprodávanější</S.H2>
       {data?.data ? (
         <Carousel>
           {data.data.map((articleData) => (
