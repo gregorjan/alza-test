@@ -31,7 +31,7 @@ export const TabArticle: FC<TabArticleProps> = ({
             <Link key="0" href="#">
               Koupit zrychleně
             </Link>,
-            <Link key="2" href="#">
+            <Link key="1" href="#">
               Porovnat
             </Link>,
             <Link key="2" href="#">

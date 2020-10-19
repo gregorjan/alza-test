@@ -22,8 +22,25 @@ const params = {
   },
 }
 
-const getProductsApi = (): Promise<Data> =>
-  postData('https://www.alza.cz/Services/RestService.svc/v2/products', params)
+const getProductsApi = (): Promise<Data[]> =>
+  Promise.all([
+    postData('https://www.alza.cz/Services/RestService.svc/v2/products', {
+      ...params,
+      filterParameters: { ...params.filterParameters, page: 1 },
+    }),
+    postData('https://www.alza.cz/Services/RestService.svc/v2/products', {
+      ...params,
+      filterParameters: { ...params.filterParameters, page: 2 },
+    }),
+    postData('https://www.alza.cz/Services/RestService.svc/v2/products', {
+      ...params,
+      filterParameters: { ...params.filterParameters, page: 3 },
+    }),
+    postData('https://www.alza.cz/Services/RestService.svc/v2/products', {
+      ...params,
+      filterParameters: { ...params.filterParameters, page: 4 },
+    }),
+  ])
 
 const getProducts = (): Promise<Data> => postData('/api/products', params)
 
