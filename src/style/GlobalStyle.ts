@@ -5,9 +5,9 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 62.5%;
        
     }
-    body {
+    main {
         max-width: 1100px;
-        margin: 0 auto;
+        margin:  0 auto;
     }
     * {  
         font-family: Arial, Helvetica, sans-serif;

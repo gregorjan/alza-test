@@ -15,24 +15,34 @@ const Tab = styled(Button)<{ active: boolean }>`
     color: ${active ? colors.primaryAlt : colors.primary};
     background-color: ${active ? colors.primary : colors.primaryAlt};
     padding: ${space[1]} ${space[2]};
-    border-top-left-radius: ${space[1]};
-    border-top-right-radius: ${space[1]};
+    @media (min-width: 480px) {
+      border-top-left-radius: ${space[1]};
+      border-top-right-radius: ${space[1]};
+    }
   `}
 `
 
 const Ul = styled.ul`
   display: flex;
+  flex-direction: column;
+  
+  align-items: stretch;
   padding: 0;
   margin: 0;
   list-style-type: none;
   ${({ theme: { colors } }) => css`
     border-bottom: 1px solid ${colors.border};
   `}
+  @media (min-width: 480px) {
+    flex-direction: row;
+  }
 `
 
 const Li = styled.li`
-  flex: 0 1 180px;
   margin: 0 1px;
+  @media (min-width: 480px) {
+    flex: 0 1 180px;
+  }
 `
 
 const Content = styled(Section)`
