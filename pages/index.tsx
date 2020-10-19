@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { FC, createContext } from 'react'
-import { GetServerSideProps } from 'next'
+import { GetStaticProps } from 'next'
 // import { useQuery } from 'react-query'
 // TODO figure where to get categories
 // eslint-disable-next-line import/extensions
@@ -37,11 +37,11 @@ const Home: FC<Props> = ({ initialData }) => {
   )
 }
 
-const getServerSideProps: GetServerSideProps = async () => {
+const getStaticProps: GetStaticProps = async () => {
   const initialData = (await getProductsApi()) as Data
   return { props: { initialData } }
 }
 
-export { getServerSideProps, Context }
+export { getStaticProps, Context }
 
 export default Home

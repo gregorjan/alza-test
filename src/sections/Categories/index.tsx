@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Wrapper } from './styled'
+import * as S from './styled'
 import { CategoryLink } from '@components'
 
 type Link = {
@@ -12,11 +12,11 @@ type Props = {
 }
 
 export const Categories: FC<Props> = ({ links }) => (
-  <Wrapper>
+  <S.Wrapper>
     {links.map(({ text, href }) => (
       <CategoryLink key={text} href={href}>
         {text}
       </CategoryLink>
     ))}
-  </Wrapper>
+  </S.Wrapper>
 )
