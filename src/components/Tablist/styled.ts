@@ -25,7 +25,6 @@ const Tab = styled(Button)<{ active: boolean }>`
 const Ul = styled.ul`
   display: flex;
   flex-direction: column;
-  
   align-items: stretch;
   padding: 0;
   margin: 0;
