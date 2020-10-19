@@ -1,3 +1,4 @@
+/* stylelint-disable */
 import { css } from 'styled-components'
 
 export const theme = {
