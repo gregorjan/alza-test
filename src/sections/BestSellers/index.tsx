@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Section, Carousel, Article } from '@components'
+import { Section, Carousel, CarouselArticle } from '@components'
 import { Data } from '@types'
 
 export const BestSellers: FC<Data> = ({ data }) => {
@@ -9,10 +9,9 @@ export const BestSellers: FC<Data> = ({ data }) => {
     <Section>
       <Carousel>
         {bestSellerData.map((articleData) => (
-          <Article
+          <CarouselArticle
             key={articleData.id + Math.random()}
             data={articleData}
-            type="carousel"
           />
         ))}
       </Carousel>

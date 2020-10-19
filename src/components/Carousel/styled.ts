@@ -37,10 +37,13 @@ const ChevronWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  pointer-events: none;
 `
 
 const Chevron = styled(Button)`
   padding: 0;
+  pointer-events: auto;
+  cursor: pointer;
   ${({ theme: { space, colors } }) =>
     css`
       height: ${space[7]};
@@ -64,14 +67,15 @@ type SlidesWrapperProps = {
 }
 
 const Slider = styled.div<SlidesWrapperProps>`
-  ${({ animation, slideWidth }) => css`
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    animation-fill-mode: forwards;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
+  display: flex;
+  overflow-x: hidden;
+  position: absolute;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  ${({ animation, slideWidth, theme: { space } }) => css`
     left: -${slideWidth};
+    padding: ${space[1]} 0;
     ${animation
       ? css`
           animation-name: ${getAnimationName(animation, slideWidth)};
@@ -86,7 +90,7 @@ const SliderWrapper = styled.div<HeightProps>`
   min-height: 100px;
   ${height};
   ${({ theme: { space } }) => css`
-    margin: 0 ${space[2]};
+    margin: 0 ${space[1]};
   `}
 `
 
