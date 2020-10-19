@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import { FC, createContext } from 'react'
 import { GetServerSideProps } from 'next'
-import { useQuery } from 'react-query'
+// import { useQuery } from 'react-query'
 // TODO figure where to get categories
 // eslint-disable-next-line import/extensions
 import links from '../mocks/links.json'
-import { getProducts, getProductsApi } from '@api'
+import { getProductsApi } from '@api'
 import { Data } from '@types'
 import { BestSellers, Categories, List } from '@sections'
 
@@ -16,12 +16,12 @@ type Props = {
 const Context = createContext<{ data?: Data }>({})
 
 const Home: FC<Props> = ({ initialData }) => {
-  const { data } = useQuery('products', getProducts, {
-    initialData,
-  })
+  // const { data } = useQuery('products', getProducts, {
+  //   initialData,
+  // })
 
   return (
-    <Context.Provider value={{ data }}>
+    <Context.Provider value={{ data: initialData }}>
       <Head>
         <title>Alza test</title>
         <link rel="icon" href="/favicon-alza.ico" />

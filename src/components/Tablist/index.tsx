@@ -12,6 +12,8 @@ export const Tablist: FC<Props> = ({ tabs }) => {
     setActiveTab(key)
   }
 
+  console.log(activeTab === tabs[0])
+
   return (
     <S.Wrapper>
       <S.Ul role="tablist">

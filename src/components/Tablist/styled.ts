@@ -10,7 +10,8 @@ const Wrapper = styled.div`
 
 const Tab = styled(Button)<{ active: boolean }>`
   width: 100%;
-  ${({ active, theme: { colors, space } }) => css`
+  height: 100%;
+  ${({ theme: { colors, space }, active }) => css`
     color: ${active ? colors.primaryAlt : colors.primary};
     background-color: ${active ? colors.primary : colors.primaryAlt};
     padding: ${space[1]} ${space[2]};
