@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
-    "@storybook/react": "^6.0.26",
+    "@storybook/react": "^6.3.6",
     "@strv/eslint-config-react": "^3.1.2",
     "@strv/prettier-config": "^1.0.3",
     "@strv/stylelint-config-styled-components": "^1.1.1",
